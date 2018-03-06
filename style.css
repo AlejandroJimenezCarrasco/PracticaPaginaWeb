@@ -1,0 +1,395 @@
+
+body{
+    margin: 0%;
+    padding: 0%;
+ /*Cargamos la tipo principal*/   
+
+    font-family: 'Roboto', sans-serif;
+}
+/*Creamos la classe para hacer el menú*/
+.nav{
+background-color: red;
+color: #2E9AFE;
+list-style: none;
+text-align:right;
+padding: 20px 0 20px 0;
+
+}
+/*Menú en bloques*/
+.nav > li{
+  display: inline-block;
+  padding: 0 25px 0 25px;
+  font-size: 15px;
+
+}
+/*Todos los links del menú tienen un efecto de tranformación, haciendo una pequeña animación*/
+/*La animacióne está ceñida a transiciones*/
+.nav > li > a {
+ text-decoration: none;
+ color: #ffffff;
+ display: block;
+    -webkit-transition:-webkit-transform 0.5s ease-out;
+    -moz-transition:-moz-transform 0.5s ease-out;
+    -o-transition:-o-transform 0.5s ease-out;
+    -ms-transition:-ms-transform 0.5s ease-out;
+    transition:transform 0.5s ease-out;
+
+}
+/*Cuando le pasas el ratón (hover) pasa esto*/
+.nav > li > a:hover{
+    color: #c1c1c1;
+    font-size: 15px;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2)
+
+}
+/*Primera media query, en este caso para móvil en vertical
+modificamos el banner y disposición en columna*/
+@media (max-width: 414px) and (min-width: 0px){
+    .nav > li{
+        display: block;
+        align-content: right;
+       padding: 30px 20px 30px 30px;
+       
+    }
+}
+
+
+/*Rótulo*/
+.logo {
+    color:  white;
+    float: left;
+    padding-left: 25px;
+    padding-top: 13px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Bowlby One SC', cursive;
+    
+}
+.logo > a {
+    text-decoration: none;
+    color: white;
+}
+/*El banner/foto, de manera responsive*/
+.banner{
+    width: 100%;
+    display: block;
+ 
+
+}
+
+.banner > .banner-image {
+width: 100%;
+display: block;
+
+}
+/*Creamos el footer*/
+.web-footer {
+    
+    background: red;
+    padding: 15px;
+    color: red;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-decoration: none;
+    
+ 
+     transition: 0.3s;
+    
+    
+    opacity: 0.3;
+
+   
+    
+  }
+
+  .web-footer > a {
+    text-decoration: none;
+  }
+ /*El footer también tiene su animación por opacidad*/
+ .web-footer:hover {
+   
+    color: red;
+    opacity: 1;
+    
+    
+  
+}
+/*Comenzamos con el cuerpo del texto*/
+ .web-title {
+    font-family: 'Bowlby One SC', cursive;
+    
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}   
+
+.service1{
+    /*Creamos distintas cajas con el borde marcado*/
+    width: 300px;
+    border: 1px solid #FF6665;
+    margin: 20px 10px;
+    padding: 0 5px;
+    float: left;
+
+
+}
+
+
+
+
+
+.services1 > p {
+    font-size: 14px;
+    color: #FF6665;
+    max-width: 250px;
+}
+
+
+/*Diferentes anchuras*/
+.services{
+    width: 1333px;
+    margin: 0 auto;
+}
+
+.services0{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/*Aquí insertamos otras media query para modificar dichas cajas, para que solo se vean en columna*/
+@media  ( max-width: 414px ) {
+	
+	.service1 {
+        
+        font-size: 12px;
+        
+    }
+    
+    .services{
+        width: 333px;
+    }
+
+}
+
+/*Media query para móviles en horizontal*/
+@media (min-width: 414px) and (max-width: 767px) {
+
+    .services{
+        width: 333px;
+    }
+    .nav > li{
+        
+        padding: 0 5px 0 5px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+       
+    }
+    .logo{
+        font-size:20px;
+        padding-top: 19px;
+    }
+
+}
+    /*TABLETS*/
+    /*El resto será estilo escritorio*/
+    @media (min-width: 768px) and (max-width: 1024px) {
+       
+       
+        .services{
+            width: 666px;
+        }
+        .nav > li {
+            padding: 0 5px 0 5px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            padding-right: 50px;
+        }
+
+        .logo{
+            font-size:15px;
+            padding-top: 19px;
+        }
+        
+      }
+
+
+h1{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FF6665;
+    color: #ffffff;
+    padding: 10px 0;
+    margin: 0 -6px;
+}
+
+.heading{
+text-align: center;
+font-size: 25px;
+color: red;
+margin: 100px 0 50px 0;
+font-weight: bold;
+
+}
+
+.image{
+    
+    max-width: 200px;
+    margin: 20px 0 0 0;
+}
+
+.image1{
+    
+    max-width: 300px;
+    margin: 20px 0 0 0;
+}
+
+.image:hover {
+    opacity: 0.5;
+ 
+}
+
+/*Comenzamos con el resto de la segunda página, donde utilizamos el flex box para alinear*/
+.flex-container {
+    display: flex;
+    justify-content: center;
+    
+    text-justify: center;
+    
+    
+  }
+  /*Atributo de las cajas que forman el cuerpo de la segunda página*/
+  .flex-container > div {
+   
+    width: 333px;
+    
+    text-justify: center;
+    margin: 20px 0 50px 0;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 20px 0px 20px 0;
+    background-color: #ede6e7;
+    
+  
+  }
+
+.image2{
+    padding-top: 20px;
+    max-width:250px;
+}
+
+ 
+  .flex-bajo{
+    padding: 30px 10px 10px 10px;
+    width: 200px;
+  
+    padding-left: 70px;
+    
+  }
+
+  .flex-alto{
+    padding-top: 20px;
+    font-weight: bold;
+  
+  }
+/*Media query que distribuye el espacio por columnas en móviles*/
+  @media (max-width: 414px) and (min-width: 0px){
+    .flex-container {
+        width: 200px;
+        flex-direction: column;
+      
+      
+        
+     
+       
+    }
+
+    .flex-container > div{
+        max-width: 333px;
+       
+         
+       
+    }
+    
+    .image2{
+   padding-top: 10px;
+    }
+  
+    .flex-bajo{
+        flex-direction: column;
+   
+        
+    }
+    .flex-alto{
+       flex-direction: column;
+      
+      
+      }
+}
+
+@media (min-width: 415px) and (max-width: 1024px) {
+    .flex-container {
+        
+        display: flex;
+        justify-content: center;
+        
+        
+        
+      }
+
+}
+
+
+ /*Formulario de texto con diferentes atributos de estilo, vamos modificando el margen y los bordes*/
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #FF6665;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+/*Modificamos el boton de la misma manera*/
+input[type=boton] {
+ 
+    background-color:red;
+    opacity: 0.8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type=boton]:hover {
+    background-color:#b80000;
+   
+}
+
+.container {
+    border-radius: 5px;
+    background-color:  #FF6665;
+    padding: 10px;
+    
+}
+
+
